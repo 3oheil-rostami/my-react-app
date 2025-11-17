@@ -95,7 +95,7 @@ export default function ContexApp() {
                   <Sidebar them={them} />
                   <Home />
                 </div>
-                <Footer them={them} />
+                <Footer />
               </ProductManger.Provider>
             </ScoreUser.Provider>
 

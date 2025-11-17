@@ -15,6 +15,8 @@ export default function Profile() {
 
   const [message, setMessage] = useState('... در انتظار !')
   const [state, setState] = useState(false)
+  const [mount , setMount] = useState(false)
+
 
   
   useEffect(() => {
@@ -46,6 +48,9 @@ export default function Profile() {
             } {...items} />
           ))
         } */}
+        {/* <div>
+          <button onClick={setMessage(!mount)}>{mount ? 'DArk' : 'Light'}</button>
+        </div> */}
 
         <div>
           {score.map((scor) => (

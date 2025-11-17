@@ -15,6 +15,7 @@ import Prodcut from '../pages/Prodcut'
 import Tamas from '../pages/Tamas'
 import TodoList from '../pages/TodoList'
 import Card from '../pages/Card'
+import Harchi from '../pages/Harchi'
 
 export default function AppRoutes() {
   return (
@@ -43,7 +44,7 @@ export default function AppRoutes() {
       </RequiredAuth>} />
       <Route path='/dashboard' element={<RequiredAuth component={<Dashboard />} />} /> */}
 
-
+      <Route path='/harchi' element={<Harchi />}/>
       <Route path='*' element={<NotFound />} />
     </Routes>
   )

@@ -44,6 +44,9 @@ export default class Sidebar extends Component {
             <li>
               <NavLink to={'/music'}>Music Player</NavLink>
             </li>
+             <li>
+              <NavLink to={'/harchi'}>Harchi</NavLink>
+            </li>
           
         </ul>
       </div>
