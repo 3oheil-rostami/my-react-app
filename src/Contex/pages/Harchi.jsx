@@ -12,7 +12,7 @@ export default function Harchi() {
     const [inp, setInp] = useState('')
     const [fil, setFil] = useState('')
     const [filterName, setFilterName] = useState('')
-
+    const [valueInp, setValueInp] = useState('')
 
     const [num, setNum] = useState([1, 2, 3])
     const name = 'Soheils'
@@ -124,23 +124,23 @@ export default function Harchi() {
     // console.log(userID.family[0])
     // console.log(userID.fullName('Kasra '))
     const workers = [
-        {id:1 , age : 18},
-        {id:2 , age: 20},
-        {id:3 , age:22},
-        {id:4 , age:25}
+        { id: 1, age: 18 },
+        { id: 2, age: 20 },
+        { id: 3, age: 22 },
+        { id: 4, age: 25 }
     ]
     const workIs = workers.filter(workAge)
     console.log(workIs)
-    function workAge ({age}) {
+    function workAge({ age }) {
         return age > 22
     }
-    const numbers = [1,2,3,4,5,6,7]
+    const numbers = [1, 2, 3, 4, 5, 6, 7]
     const nummm = workers.some(u => u.name)
     console.log(nummm)
 
     const even = numbers.filter(isEven)
 
-    function isEven (element) {
+    function isEven(element) {
         return element % 2 == 0
     }
     // console.log(even)
@@ -168,6 +168,17 @@ export default function Harchi() {
         console.log(result);
         filterName(result)
     }
+    const math = Math.floor(Math.random() * 10)
+    // console.log(math)
+
+    function formHandler(e) {
+        e.preventDefault()
+        const data = new FormData(form);
+        const name = data.get("username");
+
+        console.log(valueInp)
+        console.log('Form submit')
+    }
     // console.log(filterName)
     return (
         <div>
@@ -176,6 +187,13 @@ export default function Harchi() {
                     <button onClick={() => setShow(!show)}>{show ? 'Hiddin' : 'Show'}</button>
                 </div>
                 {/* <button>Show</button> */}
+            </div>
+
+            <div>
+                <form onSubmit={formHandler}>
+                    <input type="text" name='username' onChange={(e) => setValueInp(e.target.value)} />
+                    <button type='submit'>Send</button>
+                </form>
             </div>
             <div>
                 <hr />
