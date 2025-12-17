@@ -13,11 +13,13 @@ export default function Harchi() {
     const [fil, setFil] = useState('')
     const [filterName, setFilterName] = useState('')
     const [valueInp, setValueInp] = useState('')
-
+    const [value, setValue] = useState(1)
     const [num, setNum] = useState([1, 2, 3])
+    const [selected, setSelected] = useState([]);
+
     const name = 'Soheils'
     const score = useContext(ScoreUser)
-    // console.log(score)
+    // console.log(score) 
 
     function requestt() {
         request('/users/3')
@@ -180,8 +182,54 @@ export default function Harchi() {
         console.log('Form submit')
     }
     // console.log(filterName)
+    //
+    const handleCheckbox = (value) => {
+        if (selected.includes(value)) {
+            // حذفش کن
+            setSelected(selected.filter(item => item !== value));
+        } else {
+            // اضافه کن
+            setSelected([...selected, value]);
+        }
+    };
     return (
         <div>
+            <div>
+                <form>
+                    <div>
+                        <label>
+                            <input
+                                type="checkbox"
+                                onChange={() => handleCheckbox("football")}
+                            />
+                            فوتبال
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                onChange={() => handleCheckbox("volleyball")}
+                            />
+                            والیبال
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                onChange={() => handleCheckbox("basketball")}
+                            />
+                            بسکتبال
+                        </label>
+
+                        {/* <button onClick={logValues}>Log</button> */}
+                    </div>
+                    {selected.map((s) => (
+                        <div>
+                            <p>{s}</p>
+                        </div>
+                    ))}
+                </form>
+            </div>
             <div style={show ? { backgroundColor: 'green', width: '200px', height: '200px' } : { backgroundColor: 'green', width: '200px', height: '200px', opacity: '0.5' }}>
                 <div>
                     <button onClick={() => setShow(!show)}>{show ? 'Hiddin' : 'Show'}</button>

@@ -1,8 +1,6 @@
-import React, { useContext } from "react"
-import { ThemContex } from "../App"
+import { createContext } from "react"
+
+const UserInfo = createContext()
 
 
-const UserConytext = React.createContext()
-
-
-export default UserConytext
+export default UserInfo

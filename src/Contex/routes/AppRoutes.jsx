@@ -16,6 +16,7 @@ import Tamas from '../pages/Tamas'
 import TodoList from '../pages/TodoList'
 import Card from '../pages/Card'
 import Harchi from '../pages/Harchi'
+import Test from '../pages/Test'
 
 export default function AppRoutes() {
   return (
@@ -32,6 +33,7 @@ export default function AppRoutes() {
       <Route path='/tamas' element={<Tamas />}/>
       <Route path='/soheil' element={<Soheil />}/>
       <Route path='/Music' element={<Music/>}/>
+      <Route path='/test' element={<Test />}/>
       <Route path='/todo' element={<TodoList />}/>
       <Route element={<RequiredAuth/>}>
         <Route path='/profile' element={<Profile />}/>

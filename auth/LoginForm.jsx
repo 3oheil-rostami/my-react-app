@@ -47,15 +47,15 @@ export default function LoginForm() {
     <div className="login-wrapper">
       <div className="login-box">
         {/* {isLogin ? <p>Hi</p> : <p>By</p>} */}
-        {err && <div style={{color:'red', fontSize:'2rem'}}>
-          <p style={{fontSize:'1.5rem'}}>نام کاربری یا رمز شما اشتباه میباشد</p>
-          </div>
-          }
+        {err && <div style={{ color: 'red', fontSize: '2rem' }}>
+          <p style={{ fontSize: '1.5rem' }}>نام کاربری یا رمز شما اشتباه میباشد</p>
+        </div>
+        }
         <h2 className="login-title">Login</h2>
         <form onSubmit={handleSubmit} className="login-form">
           <label>Username</label>
           <div>
-            <input type="text" placeholder="Username" name="username" />
+            <input type="text" placeholder="Username" name="username" required/>
           </div>
           <label>Password</label>
           <div>

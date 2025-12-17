@@ -12,11 +12,11 @@ import request from './tools/request'
 import AppRoutes from './routes/AppRoutes'
 import Prodcut from './pages/Prodcut'
 import ScoreUser from './context/ScoreUser'
+import UserInfo from './context/UserContext'
 
 
 export const ThemContex = React.createContext()
 // export const UserContext = React.createContext()
-
 
 const thems = {
   dark: { color: 'black', backgroundColor: 'lightgray' },
@@ -25,7 +25,7 @@ const thems = {
 }
 export default function ContexApp() {
 
-  // const [tem, setTem] = useState(false)
+  // const [tem, setTem] = useState(false
   const [esm, setEsm] = useState('Soheil')
   const [them, setThem] = useState(thems.light)
   // const [user, setUser] = useState({})
@@ -91,9 +91,12 @@ export default function ContexApp() {
 
             <ScoreUser.Provider value={score}>
               <ProductManger.Provider value={{ numm, setNumm }}>
+
                 <div className="main">
                   <Sidebar them={them} />
-                  <Home />
+                  <UserInfo.Provider value={numm}>
+                    <Home />
+                  </UserInfo.Provider>
                 </div>
                 <Footer />
               </ProductManger.Provider>

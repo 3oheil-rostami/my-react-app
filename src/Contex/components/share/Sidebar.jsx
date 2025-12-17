@@ -11,43 +11,46 @@ export default class Sidebar extends Component {
         <h3>Sidebar</h3>
         <h2>سبد خرید : {this.props.numm}</h2>
         <ul>
-            {/* <Link to='/'>Home</Link>
+          {/* <Link to='/'>Home</Link>
             <Link to='/about'>About</Link>
             <Link to='/contact'>Contact</Link> */}
-            <li>
-              <NavLink to={'/'}>Home</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/about'}>About</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/product'}>Prodcut</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/Contact'}>Contact</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/article'}>Articles</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/profile'}>Profile</NavLink>
-            </li>
-             <li>
-              <NavLink to={'/dashboard'}>Dashboard</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/tamas'}>Tamas</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/todo'}>TodoList</NavLink>
-            </li>
-            <li>
-              <NavLink to={'/music'}>Music Player</NavLink>
-            </li>
-             <li>
-              <NavLink to={'/harchi'}>Harchi</NavLink>
-            </li>
-          
+          <li>
+            <NavLink to={'/'}>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/test'}>Test</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/about'}>About</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/product'}>Prodcut</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/Contact'}>Contact</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/article'}>Articles</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/profile'}>Profile</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/dashboard'}>Dashboard</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/tamas'}>Tamas</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/todo'}>TodoList</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/music'}>Music Player</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/harchi'}>Harchi</NavLink>
+          </li>
+
         </ul>
       </div>
     )
